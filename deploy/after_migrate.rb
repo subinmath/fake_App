@@ -5,5 +5,5 @@ template "/tmp/contentfile" do
   group "www-data"
   mode "0644"
   action :create
-  variables(hell: node[:"web-app"][:servlet][:servlet-name])
+  variables(hello: node["web-app"]["servlet"][0])
 end
