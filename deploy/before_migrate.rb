@@ -6,7 +6,5 @@ template "/tmp/file" do
   group "www-data"
   mode "0644"
   action :create
-  variables(hell: node[:web-app][:servlet])
+  variables(hell: node[:web-app][:servlet][:servlet-name])
 end
-
-node[:web-app][:servlet] 
